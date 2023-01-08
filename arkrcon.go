@@ -5,9 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/james4k/rcon"
-	"os"
 	"regexp"
-	"strconv"
 	"strings"
 )
 
