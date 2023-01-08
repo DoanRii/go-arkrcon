@@ -228,7 +228,7 @@ func (a *ARKRcon) forcePlayerToJoinTribe(playerID, tribeID int) {
 /*
 	Ark Shop Commands
 */
-func (a *ARKRcon) ArkShopAddPoints(steamID, amount int) {
+func (a *ARKRcon) ArkShopAddPoints(steamID, amount int) error {
 	//givepoints
 	return a.emptyResponse(fmt.Sprintf(`AddPoints %s %d`, steamID, amount))
 }
