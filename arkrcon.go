@@ -226,6 +226,24 @@ func (a *ARKRcon) forcePlayerToJoinTribe(playerID, tribeID int) {
 }
 
 /*
+	Plugins Load/Unload
+*/
+func (a *ARKRcon) pluginsLoad(plugins string) error {
+	//Load
+	return a.emptyResponse(fmt.Sprintf(`plugins.load %s`, plugins))
+}
+func (a *ARKRcon) pluginsUnLoad(plugins string) error {
+	//Unload
+	return a.emptyResponse(fmt.Sprintf(`plugins.unload %s`, plugins))
+}
+/*
+	ItemPlus
+*/
+func (a *ARKRcon) pluginsItemPlusReload() error {
+	//Unload
+	return a.emptyResponse(fmt.Sprintf(`ItemsPlus.reload`))
+}
+/*
 	Ark Shop Commands
 */
 func (a *ARKRcon) ArkShopAddPoints(steamID, amount int) error {
